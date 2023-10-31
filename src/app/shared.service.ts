@@ -41,4 +41,9 @@ export class SharedService {
     let notesCollection = doc(this.fs, 'notes/' + id);
     return updateDoc(notesCollection, data);
   }
+  markDone(status: boolean, id: string) {
+    let data = { status: status };
+    let notesCollection = doc(this.fs, 'notes/' + id);
+    return updateDoc(notesCollection, data);
+  }
 }
