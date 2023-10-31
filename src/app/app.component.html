@@ -1,4 +1,48 @@
 <router-outlet></router-outlet>
 
-<h1>Hello World</h1>
+<!-- <h1>Hello World</h1>
+<br /> -->
+
+<h1>Todo App</h1>
 <br />
+
+<input type="text" class="todo-input" placeholder="Enter task" #newNote />
+<button class="add-button" (click)="addNotes(newNote.value)">Add Note</button>
+
+<h3 *ngFor="let note of notes">
+  <b>* {{ note.description }} <br /></b>
+
+  <p class="categ">
+    Category: <span *ngIf="note.type; else noneText">{{ note.type }}</span>
+  </p>
+  <ng-template #noneText>none</ng-template>
+  <div>
+    <input
+      type="text"
+      class="todo-input"
+      placeholder="Enter here to edit task"
+      #noteUpdate
+    />
+    <button
+      class="update-button"
+      (click)="updateNotes(noteUpdate.value, note.id)"
+    >
+      Update Note
+    </button>
+  </div>
+  <button class="delete-button" (click)="deleteNotes(note.id)">
+    Delete Note
+  </button>
+
+  <select
+    #choice
+    name="category"
+    id="category"
+    (change)="updateCategories(choice.options[+choice.value].text, note.id)"
+  >
+    <option [value]="" disabled selected>Select Category</option>
+    <option *ngFor="let item of category" [value]="item.id">
+      {{ item.type }}
+    </option>
+  </select>
+</h3>

@@ -1,5 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { Firestore, collection, collectionData } from '@angular/fire/firestore';
 import { Observable, switchMap, map } from 'rxjs';
 import { SharedService } from './shared.service';
 
