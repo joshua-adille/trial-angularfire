@@ -9,7 +9,7 @@
 <input type="text" class="todo-input" placeholder="Enter task" #newNote />
 <button class="add-button" (click)="addNotes(newNote.value)">Add Note</button>
 
-<h3 *ngFor="let note of notes">
+<h3 *ngFor="let note of notes; let i = index">
   <b>* {{ note.description }} <br /></b>
 
   <p class="categ">
@@ -49,9 +49,9 @@
   <div class="myCheckbox">
     <input
       type="checkbox"
-      #mycheckbox
-      (change)="markDone(mycheckbox.checked, note.id)"
-      id="myCheckbox"
+      [(ngModel)]="isChecked[i]"
+      (change)="markDone(isChecked[i], note.id)"
+      id="myCheckbox{{ i }}"
       name="myCheckbox"
     />
     <label for="myCheckbox">Mark as Done</label>
