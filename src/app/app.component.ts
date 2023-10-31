@@ -11,6 +11,7 @@ export class AppComponent {
   constructor(private service: SharedService) {}
   notes: any = [];
   category: any = [];
+  isChecked: boolean = false;
   // selectedCategory: string;
 
   getData() {
