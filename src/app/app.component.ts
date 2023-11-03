@@ -1,11 +1,21 @@
 import { Component, inject } from '@angular/core';
 import { Observable, switchMap, map } from 'rxjs';
 import { SharedService } from './shared.service';
+import { FormsModule } from '@angular/forms';
+import { NgFor, NgIf } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: true,
+    imports: [
+        RouterOutlet,
+        NgFor,
+        NgIf,
+        FormsModule,
+    ],
 })
 export class AppComponent {
   constructor(private service: SharedService) {}
