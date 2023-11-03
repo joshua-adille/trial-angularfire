@@ -63,9 +63,11 @@
 <br /><br />
 
 <app-notes
+  [category]="category"
   *ngFor="let note of notes"
   [note]="note"
   (updateData)="updateNotes($event.value, $event.id)"
   (deleteData)="deleteNotes($event)"
+  (categoryData)="updateCategories($event.data, $event.id)"
 >
 </app-notes>
