@@ -57,12 +57,15 @@
     <label for="myCheckbox">Mark as Done</label>
   </div>
 </h3>
-
+<b
+  >~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</b
+>
 <br /><br />
 
 <app-notes
   *ngFor="let note of notes"
   [note]="note"
-  (topData)="updateNotes($event.value, $event.id)"
+  (updateData)="updateNotes($event.value, $event.id)"
+  (deleteData)="deleteNotes($event)"
 >
 </app-notes>

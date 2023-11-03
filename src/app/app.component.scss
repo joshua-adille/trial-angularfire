@@ -1,116 +1,116 @@
-* {
-  font-size: 25px;
-  padding: 30px;
-}
+// * {
+//   font-size: 25px;
+//   padding: 30px;
+// }
 
-.categ {
-  margin: 0;
-  padding: 0 0 0 30px;
-  font-size: 20px;
-}
-.delete-button {
-  background-color: #3498db;
-  color: #fff;
-  padding: 10px 20px;
-  margin: 0 5px 0 0;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+// .categ {
+//   margin: 0;
+//   padding: 0 0 0 30px;
+//   font-size: 20px;
+// }
+// .delete-button {
+//   background-color: #3498db;
+//   color: #fff;
+//   padding: 10px 20px;
+//   margin: 0 5px 0 0;
+//   border: none;
+//   border-radius: 5px;
+//   cursor: pointer;
+//   transition: background-color 0.3s ease;
 
-  &:hover {
-    background-color: #2980b9;
-  }
-}
-.update-button {
-  background-color: #db3434;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+//   &:hover {
+//     background-color: #2980b9;
+//   }
+// }
+// .update-button {
+//   background-color: #db3434;
+//   color: #fff;
+//   padding: 10px 20px;
+//   border: none;
+//   border-radius: 5px;
+//   cursor: pointer;
+//   transition: background-color 0.3s ease;
 
-  &:hover {
-    background-color: #db3434;
-  }
-}
-.add-button {
-  background-color: #34db3c;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+//   &:hover {
+//     background-color: #db3434;
+//   }
+// }
+// .add-button {
+//   background-color: #34db3c;
+//   color: #fff;
+//   padding: 10px 20px;
+//   border: none;
+//   border-radius: 5px;
+//   cursor: pointer;
+//   transition: background-color 0.3s ease;
 
-  &:hover {
-    background-color: #34db3c;
-  }
-}
+//   &:hover {
+//     background-color: #34db3c;
+//   }
+// }
 
-.todo-input {
-  padding: 10px;
-  margin: 10px;
-  border: 1px solid #3498db;
-  border-radius: 5px;
-  width: 400px;
-  font-size: 16px;
+// .todo-input {
+//   padding: 10px;
+//   margin: 10px;
+//   border: 1px solid #3498db;
+//   border-radius: 5px;
+//   width: 400px;
+//   font-size: 16px;
 
-  &:focus {
-    border-color: #2980b9;
-  }
-}
+//   &:focus {
+//     border-color: #2980b9;
+//   }
+// }
 
-// Style for the select element
-select {
-  width: 20%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  margin-top: 5px;
-}
+// // Style for the select element
+// select {
+//   width: 20%;
+//   padding: 8px;
+//   border: 1px solid #ccc;
+//   border-radius: 4px;
+//   font-size: 16px;
+//   margin-top: 5px;
+// }
 
-// Style for the "Nothing selected yet" option
-select option[disabled]:first-child {
-  color: #999; // Change the color to a grayish tone
-}
+// // Style for the "Nothing selected yet" option
+// select option[disabled]:first-child {
+//   color: #999; // Change the color to a grayish tone
+// }
 
-//Checkbox style
-.myCheckbox {
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
+// //Checkbox style
+// .myCheckbox {
+//   display: inline-flex;
+//   align-items: center;
+//   cursor: pointer;
 
-  input[type="checkbox"] {
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #007bff;
-    border-radius: 3px;
-    cursor: pointer;
+//   input[type="checkbox"] {
+//     appearance: none;
+//     width: 20px;
+//     height: 20px;
+//     border: 2px solid #007bff;
+//     border-radius: 3px;
+//     cursor: pointer;
 
-    &:checked {
-      background-color: #007bff;
-    }
+//     &:checked {
+//       background-color: #007bff;
+//     }
 
-    &::after {
-      content: "";
-      display: block;
-      width: 7px;
-      height: 12px;
-      border: solid #fff;
-      border-width: 0 2px 2px 0;
-      transform: rotate(45deg);
-      position: absolute;
-      top: 4px;
-      left: 7px;
-    }
-  }
+//     &::after {
+//       content: "";
+//       display: block;
+//       width: 7px;
+//       height: 12px;
+//       border: solid #fff;
+//       border-width: 0 2px 2px 0;
+//       transform: rotate(45deg);
+//       position: absolute;
+//       top: 4px;
+//       left: 7px;
+//     }
+//   }
 
-  label {
-    cursor: pointer;
-    padding-left: 8px;
-  }
-}
+//   label {
+//     cursor: pointer;
+//     padding-left: 8px;
+//   }
+// }
