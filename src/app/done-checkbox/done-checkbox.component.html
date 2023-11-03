@@ -1,0 +1,11 @@
+<div class="myCheckbox">
+  <input
+    type="checkbox"
+    [(ngModel)]="isChecked[i]"
+    (change)="pushCheckboxData(isChecked[i], note.id)"
+    id="myCheckbox{{ i }}"
+    name="myCheckbox"
+  />
+  <label for="myCheckbox">Mark as Done</label>
+</div>
+{{ i }}

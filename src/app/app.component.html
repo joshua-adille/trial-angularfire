@@ -64,10 +64,13 @@
 
 <app-notes
   [category]="category"
-  *ngFor="let note of notes"
+  [notes]="notes"
+  *ngFor="let note of notes; let i = index"
+  [i]="i"
   [note]="note"
   (updateData)="updateNotes($event.value, $event.id)"
   (deleteData)="deleteNotes($event)"
   (categoryData)="updateCategories($event.data, $event.id)"
+  (checkboxData)="markDone($event.data, $event.id)"
 >
 </app-notes>

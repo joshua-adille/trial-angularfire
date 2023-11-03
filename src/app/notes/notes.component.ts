@@ -5,6 +5,8 @@ import { Note } from '../note';
 import { TaskEditComponent } from '../task-edit/task-edit.component';
 import { DeleteButtonComponent } from '../delete-button/delete-button.component';
 import { CategorySelectorComponent } from '../category-selector/category-selector.component';
+import { DoneCheckboxComponent } from '../done-checkbox/done-checkbox.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-notes',
@@ -14,18 +16,22 @@ import { CategorySelectorComponent } from '../category-selector/category-selecto
     TaskEditComponent,
     DeleteButtonComponent,
     CategorySelectorComponent,
+    DoneCheckboxComponent,
+    FormsModule,
   ],
   templateUrl: './notes.component.html',
   styleUrls: ['./notes.component.scss'],
 })
 export class NotesComponent {
   constructor(private service: SharedService) {}
-
+  @Input() i: any;
+  @Input() notes: any = [];
   @Input() note!: Note;
   @Input() category: any = [];
   @Output() updateData = new EventEmitter<{ value: string; id: string }>();
   @Output() deleteData = new EventEmitter<string>();
   @Output() categoryData = new EventEmitter<{ data: string; id: string }>();
+  @Output() checkboxData = new EventEmitter<{ data: boolean; id: string }>();
 
   pushUpdateData(data: { value: string; id: string }) {
     this.updateData.emit(data);
@@ -37,5 +43,8 @@ export class NotesComponent {
 
   pushCategoryData(data: { data: string; id: string }) {
     this.categoryData.emit(data);
+  }
+  pushCheckboxData(data: { data: boolean; id: string }) {
+    this.checkboxData.emit(data);
   }
 }
