@@ -6,3 +6,7 @@
   Category: <span *ngIf="note.type; else noneText">{{ note.type }}</span>
 </p>
 <ng-template #noneText>none</ng-template>
+<app-task-edit
+  [note]="note"
+  (buttonData)="pushDataToTop($event)"
+></app-task-edit>
