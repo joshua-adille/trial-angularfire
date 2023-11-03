@@ -4,18 +4,14 @@ import { SharedService } from './shared.service';
 import { FormsModule } from '@angular/forms';
 import { NgFor, NgIf } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { NotesComponent } from './notes/notes.component';
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    standalone: true,
-    imports: [
-        RouterOutlet,
-        NgFor,
-        NgIf,
-        FormsModule,
-    ],
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  standalone: true,
+  imports: [RouterOutlet, NgFor, NgIf, FormsModule, NotesComponent],
 })
 export class AppComponent {
   constructor(private service: SharedService) {}

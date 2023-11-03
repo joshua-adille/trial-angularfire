@@ -57,3 +57,7 @@
     <label for="myCheckbox">Mark as Done</label>
   </div>
 </h3>
+
+<br /><br />
+
+<app-notes *ngFor="let note of notes" [note]="note"></app-notes>
