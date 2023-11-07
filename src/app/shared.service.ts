@@ -19,7 +19,7 @@ export class SharedService {
     return collectionData(notesCollection, { idField: 'id' });
   }
   addNote(desc: string) {
-    let data = { description: desc };
+    let data = { description: desc, moveToArchive: false };
     let notesCollection = collection(this.fs, 'notes');
     return addDoc(notesCollection, data);
   }
