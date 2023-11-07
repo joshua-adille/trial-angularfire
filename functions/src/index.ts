@@ -15,6 +15,23 @@ import * as logger from 'firebase-functions/logger';
 
 export const helloWorld = onRequest((request, response) => {
   logger.info('Hello logs!', { structuredData: true });
-  console.log(request);
+  console.log('Request Body: ', request.body);
+  console.log('Request Headers: ', request.headers);
   response.send('Hello from Firebase!');
+});
+
+// export const textToLength = onRequest((request, response) => {
+//   var text = request.query.text;
+//   var textLength = text?.length;
+//   // console.log('text length: ' + textLength);
+//   response.send('Text length: ' + textLength);
+// });
+
+export const textToLength = onRequest((request, response) => {
+  console.log('Request Body: ', request.body);
+  const requestBody = request.body;
+  const text = requestBody?.data?.text;
+  const textLength = text?.length;
+  console.log('text length: ' + textLength);
+  response.send('The text length is: ' + textLength);
 });
